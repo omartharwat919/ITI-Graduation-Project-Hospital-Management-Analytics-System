@@ -61,6 +61,12 @@ It integrates:
   - Expenses & hospital finance
  
 - **Below are sample dashboards created for hospital analytics:**
+  - <img width="1102" height="617" alt="4" src="https://github.com/user-attachments/assets/cf7b9abe-03a0-4c3a-a61d-6e34455f5df3" />
+  - <img width="1101" height="618" alt="1" src="https://github.com/user-attachments/assets/d00d52cf-3a05-4d84-8c79-6a35ded561c6" />
+  - <img width="1101" height="616" alt="2" src="https://github.com/user-attachments/assets/b69bff0c-1810-42f5-a98a-cfe12a86919f" />
+  - <img width="1055" height="595" alt="3" src="https://github.com/user-attachments/assets/8ae82949-31a6-4c7b-9980-18d01a68464f" />
+  - <img width="1101" height="619" alt="4" src="https://github.com/user-attachments/assets/da0016ef-e605-42b1-921c-72bce2605f75" />
+
 
 ---
 
