@@ -1,0 +1,836 @@
+/* General Body and Layout */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif; /* Using Inter font as per previous discussions */
+  /* Updated: More vibrant and eye-catching gradient background for the entire body */
+  background-image: linear-gradient(to bottom right, #e0f7fa, #e1f5fe, #fce4ec); /* Light Teal to Light Blue to Light Pink */
+  min-height: 100vh; /* Ensure it covers the full viewport height */
+  background-attachment: fixed; /* Fix background during scroll */
+}
+
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  /* Removed background-color here as it's now on the body */
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 250px;
+  background-color: #ffffff;
+  box-shadow: 2px 0 15px rgba(0, 0, 0, 0.1); /* Stronger shadow */
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  border-right: 1px solid #e0e0e0;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  padding: 0 20px 30px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20px;
+}
+
+.sidebar-logo {
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-app-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-right: 5px;
+}
+
+.sidebar-system-name {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-nav li {
+  display: flex;
+  align-items: center;
+  padding: 18px 25px; /* Increased padding for larger clickable area */
+  margin: 10px 0; /* Increased margin for more spacing */
+  color: #5a5a5a; /* Updated: Darker grey for better contrast on light background */
+  font-weight: 600; /* Bolder text */
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 0 30px 30px 0; /* More rounded right corners */
+  font-size: 1.2rem; /* Increased font size for words */
+}
+
+.sidebar-nav li svg {
+  margin-right: 18px; /* Increased margin for icon */
+  font-size: 1.5rem; /* Larger icons */
+  color: #888; /* Slightly lighter grey for inactive icons */
+  transition: color 0.3s ease;
+}
+
+.sidebar-nav li:hover {
+  background-image: linear-gradient(to right, #e3f2fd, #e8f5e9); /* Soft blue to green gradient on hover */
+  color: #3f51b5; /* Darker blue text on hover */
+  transform: translateX(8px); /* More pronounced hover effect */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+}
+
+.sidebar-nav li.active {
+  /* Updated: Vibrant purple-blue gradient for active state */
+  background-image: linear-gradient(to right, #673ab7, #3f51b5); /* Deep Purple to Indigo */
+  color: white;
+  font-weight: 700; /* Even bolder for active */
+  box-shadow: 0 6px 20px rgba(103, 58, 183, 0.5); /* Stronger shadow for active */
+}
+
+.sidebar-nav li.active svg {
+  color: white;
+}
+
+.sidebar-footer {
+  margin-top: auto; /* Pushes to the bottom */
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  color: #777;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.sidebar-footer svg {
+  margin-right: 15px;
+  font-size: 1.2rem;
+}
+
+.sidebar-footer:hover {
+  color: #f44336; /* Red on hover for logout */
+}
+
+/* Main Content Area */
+.main-content-area {
+  flex-grow: 1;
+  padding: 30px;
+  background-color: transparent; /* Changed to transparent as body has the gradient */
+}
+
+/* Header Styling */
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+.header-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+
+.header-date {
+  font-size: 0.9rem;
+  color: #777;
+  margin-left: 20px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  padding: 10px 10px 10px 40px; /* Left padding for icon */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: #555;
+  width: 200px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search-bar input:focus {
+  outline: none;
+  border-color: #3f51b5;
+  box-shadow: 0 0 0 3px rgba(63, 81, 181, 0.2);
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+  color: #aaa;
+  font-size: 1rem;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid #3f51b5;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  font-weight: 600;
+  color: #333;
+  font-size: 1rem;
+}
+
+.user-role {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+/* Dashboard Content Grid for Stats */
+.dashboard-content {
+  padding: 0 20px; /* Padding for the main content area */
+}
+
+.dashboard-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.stat-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+.stat-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-title {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #777;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-count {
+  margin: 5px 0;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.stat-percentage {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Dashboard Sections Grid (Recent Appointments, Department Status) */
+.dashboard-sections-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns for these sections */
+  gap: 25px;
+}
+
+.section-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 25px;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Appointment List */
+.appointment-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.appointment-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.appointment-item:last-child {
+  border-bottom: none;
+}
+
+.appointment-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.appointment-name {
+  font-weight: 500;
+  color: #444;
+  font-size: 1rem;
+}
+
+.appointment-date {
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 3px;
+}
+
+.appointment-status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.appointment-status.scheduled {
+  background-color: #e3f2fd;
+  color: #2196F3;
+}
+
+.appointment-status.completed {
+  background-color: #e8f5e9;
+  color: #4CAF50;
+}
+
+/* Department List */
+.department-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.department-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.department-item:last-child {
+  border-bottom: none;
+}
+
+.department-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.department-name {
+  font-weight: 500;
+  color: #444;
+  font-size: 1rem;
+}
+
+.department-patients {
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 3px;
+}
+
+.department-status-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.department-status-badge.high {
+  background-color: #ffebee;
+  color: #f44336;
+}
+
+.department-status-badge.normal {
+  background-color: #e8f5e9;
+  color: #4CAF50;
+}
+
+.department-status-badge.low {
+  background-color: #e0f7fa;
+  color: #00BCD4;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .app-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    padding: 15px 0;
+    border-right: none;
+    border-bottom: 1px solid #e0e0e0;
+    flex-direction: row; /* Horizontal layout for mobile header */
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .sidebar-header {
+    padding: 0 15px;
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+
+  .sidebar-nav {
+    display: none; /* Hide sidebar nav on small screens by default */
+  }
+
+  .sidebar-footer {
+    display: none; /* Hide logout on small screens */
+  }
+
+  .main-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+  }
+
+  .header-right {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+
+  .search-bar input {
+    width: 100%;
+  }
+
+  .dashboard-stats-grid,
+  .dashboard-sections-grid {
+    grid-template-columns: 1fr; /* Single column layout for mobile */
+    gap: 20px;
+  }
+
+  .dashboard-content {
+    padding: 0 15px;
+  }
+}
+
+/* Specific adjustments for the mobile sidebar toggle */
+.sidebar.mobile-open {
+  display: flex; /* Show sidebar when open */
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px; /* Fixed width sidebar when open */
+  z-index: 1000; /* Ensure it's on top */
+  flex-direction: column;
+  box-shadow: 4px 0 15px rgba(0,0,0,0.2);
+}
+
+.sidebar.mobile-open .sidebar-nav {
+  display: block; /* Show nav when sidebar is open */
+  flex-grow: 1; /* Allow nav to take available space */
+  overflow-y: auto; /* Scroll if content is long */
+}
+
+.sidebar.mobile-open .sidebar-header {
+  border-bottom: 1px solid #eee; /* Add border back for open mobile sidebar */
+  margin-bottom: 20px;
+}
+
+.sidebar-toggle-button { /* A button to open/close mobile sidebar */
+  display: none; /* Hidden on desktop */
+}
+
+@media (max-width: 768px) {
+  .sidebar-toggle-button {
+    display: block; /* Show on mobile */
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #555;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+  }
+  .sidebar-toggle-button:hover {
+    background-color: #eee;
+  }
+}
+/* Add these to your existing Dashboard.css */
+
+/* Vitals Summary Grid */
+.vitals-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.vital-summary-card {
+  background: white;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid #e0e0e0;
+}
+
+.vital-summary-card .vital-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.vital-summary-card .vital-patient {
+  font-weight: 600;
+  color: #333;
+}
+
+.vital-summary-card .vital-status {
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.vital-summary-card .vital-status.normal {
+  background-color: #c8e6c9;
+  color: #2e7d32;
+}
+
+.vital-summary-card .vital-status.critical {
+  background-color: #ffcdd2;
+  color: #c62828;
+}
+
+.vital-summary-card .vital-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.vital-summary-card .vital-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.vital-summary-card .vital-label {
+  font-size: 12px;
+  color: #666;
+}
+
+.vital-summary-card .vital-value {
+  font-weight: 600;
+  color: #333;
+}
+
+.vital-summary-card .vital-footer {
+  font-size: 11px;
+  color: #888;
+  text-align: right;
+}
+
+.no-vitals {
+  text-align: center;
+  color: #888;
+  padding: 20px;
+  grid-column: 1 / -1;
+}
+
+/* Critical Vitals Stat Card */
+.stat-card.critical {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(244, 67, 54, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(244, 67, 54, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(244, 67, 54, 0); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .vitals-summary-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* Billing Summary Styles */
+.bills-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.bill-summary-card {
+  background: white;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid #e0e0e0;
+}
+
+.bill-summary-card .bill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.bill-summary-card .bill-id {
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.bill-summary-card .bill-status {
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.bill-summary-card .bill-status.paid {
+  background-color: #c8e6c9;
+  color: #2e7d32;
+}
+
+.bill-summary-card .bill-status.unpaid {
+  background-color: #ffcdd2;
+  color: #c62828;
+}
+
+.bill-summary-card .bill-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.bill-summary-card .bill-amount,
+.bill-summary-card .bill-outstanding {
+  display: flex;
+  flex-direction: column;
+}
+
+.bill-summary-card .label {
+  font-size: 12px;
+  color: #666;
+}
+
+.bill-summary-card .value {
+  font-weight: 600;
+  color: #333;
+}
+
+.bill-summary-card .bill-footer {
+  font-size: 11px;
+  color: #888;
+  text-align: right;
+}
+
+.no-bills {
+  text-align: center;
+  color: #888;
+  padding: 20px;
+  grid-column: 1 / -1;
+}
+
+/* Outstanding Payments Stat Card */
+.stat-card.outstanding {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(244, 67, 54, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(244, 67, 54, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(244, 67, 54, 0); }
+}
+/* Lab Tests Chart Styles */
+.lab-tests-chart-container {
+  height: 350px;
+  margin-top: 15px;
+  position: relative;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.no-lab-tests {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #666;
+  font-size: 16px;
+}
+
+/* Section Card Enhancements */
+.section-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 25px;
+}
+
+.section-title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #3f51b5;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Department Status Styles */
+.department-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.department-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.department-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.department-name {
+  font-weight: 600;
+  color: #333;
+}
+
+.department-patients {
+  font-size: 14px;
+  color: #666;
+}
+
+.department-status-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.department-status-badge.high {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.department-status-badge.normal {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .lab-tests-chart-container {
+    height: 300px;
+    padding: 10px;
+  }
+  
+  .section-card {
+    padding: 15px;
+  }
+}
+/* تنسيقات الرسم البياني */
+.chart-container {
+  height: 300px;
+  margin-top: 1rem;
+  position: relative;
+}
+
+/* تنسيقات بطاقة القسم */
+.section-card {
+  background: white;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.section-card:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}

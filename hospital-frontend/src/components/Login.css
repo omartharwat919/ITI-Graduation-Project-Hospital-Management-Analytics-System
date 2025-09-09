@@ -1,0 +1,226 @@
+/* Import Google Fonts - Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* General Body Styling */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Login Container - Enhanced Background */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* More vibrant and complex gradient background */
+  background-image: linear-gradient(135deg, #84fab0 0%, #8fd3f4 50%, #96bce8 100%); /* Green-blue to light blue to soft purple-blue */
+  padding: 20px;
+  box-sizing: border-box;
+  animation: backgroundGradient 15s ease infinite; /* Smooth animation for background */
+  background-size: 200% 200%; /* Ensure gradient covers full area for animation */
+}
+
+/* Keyframes for background animation */
+@keyframes backgroundGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Login Card - Refined Styling */
+.login-card {
+  background-color: #ffffff;
+  padding: 50px 40px;
+  border-radius: 20px; /* More rounded corners */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* Stronger, softer shadow */
+  text-align: center;
+  width: 100%;
+  max-width: 500px; /* Slightly increased max width */
+  transform: translateY(0);
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out; /* Smoother transitions */
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Subtle white border for depth */
+  backdrop-filter: blur(5px); /* Optional: slight blur effect if container background is visible through */
+}
+
+.login-card:hover {
+  transform: translateY(-8px); /* More pronounced lift on hover */
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25); /* Even stronger shadow on hover */
+}
+
+/* Logo */
+.login-logo {
+  width: 130px; /* Slightly larger logo */
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 40px; /* Increased margin-bottom */
+  border: 5px solid #6a89cc; /* Thicker, complementary border */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* More prominent shadow */
+}
+
+/* Titles and Subtitles */
+.login-title {
+  font-size: 2.6rem; /* Larger title */
+  font-weight: 800;
+  color: #2c3e50; /* Darker, sophisticated blue-grey */
+  margin-bottom: 15px;
+}
+
+.login-subtitle {
+  font-size: 1.2rem; /* Larger subtitle */
+  color: #7f8c8d; /* Muted grey for subtitle */
+  margin-bottom: 45px; /* Increased margin-bottom */
+}
+
+/* Form Group (Label + Input) */
+.login-form .form-group {
+  margin-bottom: 28px; /* Increased margin-bottom for form groups */
+  text-align: left;
+}
+
+.login-form label {
+  display: block;
+  font-size: 1.1rem; /* Larger label font size */
+  color: #34495e; /* Darker blue-grey for labels */
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 18px 20px; /* Increased padding */
+  border: 1px solid #dcdcdc; /* Lighter border */
+  border-radius: 12px; /* More rounded corners */
+  font-size: 1.2rem; /* Larger input font size */
+  color: #333333;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+  background-color: #f9f9f9; /* Slightly off-white background */
+}
+
+.login-form input::placeholder {
+  color: #b0b0b0; /* Lighter placeholder text */
+}
+
+.login-form input:focus {
+  outline: none;
+  border-color: #6a89cc; /* Complementary blue focus border */
+  box-shadow: 0 0 0 5px rgba(106, 137, 204, 0.4); /* More prominent focus shadow */
+}
+
+/* Error Message */
+.error-message {
+  color: #e74c3c;
+  font-size: 1rem; /* Slightly larger error font size */
+  margin-top: -18px; /* Adjusted margin to be closer to input */
+  margin-bottom: 25px; /* Increased margin-bottom */
+  text-align: left;
+  font-weight: 500;
+}
+
+/* Login Button - Enhanced Gradient */
+.login-button {
+  width: 100%;
+  padding: 20px 25px; /* Increased padding */
+  border: none;
+  border-radius: 15px; /* More rounded corners */
+  font-size: 1.4rem; /* Larger button font size */
+  font-weight: 700;
+  color: white;
+  /* More vibrant and attractive gradient for the button */
+  background-image: linear-gradient(45deg, #6a89cc 0%, #a7bfe8 100%); /* Deep blue to light blue gradient */
+  cursor: pointer;
+  transition: all 0.4s ease-in-out; /* Smoother transitions */
+  box-shadow: 0 8px 25px rgba(106, 137, 204, 0.5); /* Stronger, more diffused shadow */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-button:hover {
+  background-image: linear-gradient(45deg, #4a7ed1 0%, #8bb3e6 100%); /* Slightly darker gradient on hover */
+  transform: translateY(-5px); /* More pronounced lift */
+  box-shadow: 0 12px 30px rgba(106, 137, 204, 0.6); /* Even stronger shadow */
+}
+
+.login-button:disabled {
+  background-image: linear-gradient(to right, #cccccc, #aaaaaa);
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  border: 5px solid rgba(255, 255, 255, 0.3); /* Thicker spinner border */
+  border-top: 5px solid #ffffff;
+  border-radius: 50%;
+  width: 28px; /* Larger spinner */
+  height: 28px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Forgot Password Link */
+.forgot-password {
+  font-size: 1.1rem; /* Larger font size */
+  color: #6a89cc; /* Complementary blue color for link */
+  margin-top: 30px; /* Increased margin-top */
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.forgot-password:hover {
+  color: #4a7ed1; /* Darker blue on hover */
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .login-card {
+    padding: 35px 25px; /* Adjusted padding for smaller screens */
+    margin: 15px;
+  }
+
+  .login-title {
+    font-size: 2.2rem;
+  }
+
+  .login-subtitle {
+    font-size: 1rem;
+  }
+
+  .login-form input {
+    padding: 15px 18px;
+    font-size: 1.05rem;
+  }
+
+  .login-button {
+    padding: 16px 20px;
+    font-size: 1.2rem;
+  }
+
+  
+}
+
+
+.login-logo {
+  max-width: 150px;
+  max-height: 150px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* إذا كانت الصورة كبيرة جداً */
+.login-logo {
+  width: 150px; /* تحديد عرض ثابت */
+  height: 150px; /* تحديد ارتفاع ثابت */
+  object-fit: contain; /* الحفاظ على نسبة العرض دون تشويه */
+}
