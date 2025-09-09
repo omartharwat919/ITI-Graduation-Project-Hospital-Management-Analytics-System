@@ -67,6 +67,10 @@ It integrates:
   - <img width="1055" height="595" alt="3" src="https://github.com/user-attachments/assets/8ae82949-31a6-4c7b-9980-18d01a68464f" />
   - <img width="1101" height="619" alt="4" src="https://github.com/user-attachments/assets/da0016ef-e605-42b1-921c-72bce2605f75" />
 
+- **Below are sample Reports created for hospital analytics:**
+  - ![IMG-20250718-WA0031](https://github.com/user-attachments/assets/2f07ffff-d7be-431b-bb42-483f2f7363c0)
+  - ![IMG-20250718-WA0033](https://github.com/user-attachments/assets/98bda5ed-4efe-409b-8d3a-a1227ce45fb2)
+  - ![IMG-20250718-WA0035](https://github.com/user-attachments/assets/7dee9bc4-1aa8-4b79-8e4b-0acc8ac5c348)
 
 ---
 
