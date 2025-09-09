@@ -88,8 +88,7 @@ It integrates:
 - **Patient:** View personal records & notifications.
     
 - **Below are sample Web created for hospital analytics:**
-  -![Uploading image.png…]()
-  - 
+  - <img width="1358" height="611" alt="Screenshot 2025-09-09 160153" src="https://github.com/user-attachments/assets/20cf7630-8daf-45aa-986c-362fade2eb79" />
   - <img width="1342" height="603" alt="Screenshot 2025-09-09 150732" src="https://github.com/user-attachments/assets/e9d67ccb-3650-4437-891c-315b58de03bc" />
   - ![2](https://github.com/user-attachments/assets/6746fe70-9931-46b4-92cc-a5715b61cfcb)
   - <img width="1340" height="609" alt="Screenshot 2025-09-09 150919" src="https://github.com/user-attachments/assets/fa565cac-1c95-454c-9dde-2bedd05a27e0" />
