@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="vortDS">
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Data Source=.;Initial Catalog=VORT;TrustServerCertificate=True</ConnectString>
+    <IntegratedSecurity>true</IntegratedSecurity>
+    <Prompt>Specify a user name and password for data source vortDS</Prompt>
+  </ConnectionProperties>
+  <DataSourceID>009ef0d3-3e44-4c91-8c39-59acd7062c53</DataSourceID>
+</RptDataSource>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="_sqlexpress.HOSPITAL"
+  DTS:DTSID="{05A8E667-E546-4C6E-BBB0-1289E9854F7E}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=\sqlexpress;Initial Catalog=HOSPITAL;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Integration Services Project1-{05A8E667-E546-4C6E-BBB0-1289E9854F7E}\sqlexpress.HOSPITAL;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

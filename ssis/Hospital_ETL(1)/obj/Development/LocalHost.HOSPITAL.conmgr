@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="LocalHost.HOSPITAL"
+  DTS:DTSID="{1BC5E735-B8F2-4BA6-8515-F09347AB2DBF}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=.;Initial Catalog=HOSPITAL;Provider=SQLNCLIRDA11.1;Integrated Security=SSPI;Application Name=SSIS-Hospital_ETL-{1BC5E735-B8F2-4BA6-8515-F09347AB2DBF}LocalHost.HOSPITAL;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
