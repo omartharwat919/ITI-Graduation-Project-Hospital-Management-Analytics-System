@@ -44,7 +44,8 @@ It integrates:
 
 ## 🗄️ Database & Data Warehouse  
 
-- **Transactional DB:** Normalized relational schema with 40+ tables (Users, Patients, Visits, Bills, Lab Tests, Radiology, Employees, etc.).  
+- **Transactional DB:** Normalized relational schema with 40+ tables (Users, Patients, Visits, Bills, Lab Tests, Radiology, Employees, etc.).
+ - <img width="6587" height="749" alt="erd" src="https://github.com/user-attachments/assets/66726080-d47c-4606-a872-80607920b1a6" />   
 - **Data Warehouse:** Galaxy schema with Fact & Dimension tables for billing, visits, workload, expenses, and clinical insights.  
 - **ETL Process:** Automated via **SSIS**, with scheduled batch jobs.  
 
