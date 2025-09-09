@@ -6,12 +6,12 @@
 The **Hospital Management and Analytics System** is a comprehensive digital platform that centralizes hospital operations and analytics.  
 It integrates:  
 
-- ✅ **Relational Database (SQL Server)** for core transactions.  
-- ✅ **Web-based System** for hospital staff and patients.  
-- ✅ **AI-powered disease diagnosis** module.  
-- ✅ **Data Warehouse (Galaxy Schema)** for analytics and reporting.  
-- ✅ **Power BI Dashboards (21 dashboards)** for real-time insights.  
-- ✅ **SSRS Reports** for financial, clinical, and operational needs.  
+-  **Relational Database (SQL Server)** for core transactions.  
+-  **Web-based System** for hospital staff and patients.  
+-  **AI-powered disease diagnosis** module.  
+-  **Data Warehouse (Galaxy Schema)** for analytics and reporting.  
+-  **Power BI Dashboards (21 dashboards)** for real-time insights.  
+-  **SSRS Reports** for financial, clinical, and operational needs.  
 
 ---
 
