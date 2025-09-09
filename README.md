@@ -1,1 +1,1 @@
-# ITI-Graduation-Project-Hospital-Management-Analytics-System
+# ITI-Graduation-Project-Hospital-Management and Analytics-System
