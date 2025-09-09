@@ -59,6 +59,7 @@ It integrates:
   - Staff workload & scheduling  
   - Bed/room occupancy  
   - Expenses & hospital finance  
+-**Below are sample dashboards created for hospital analytics:**
 
 ---
 
