@@ -85,6 +85,17 @@ It integrates:
 - **Nurse:** Vitals, patient monitoring, room assignments.  
 - **Finance:** Bills, payments, insurance claims.  
 - **HR Manager:** Staff, shifts, leave requests.  
-- **Patient:** View personal records & notifications.  
+- **Patient:** View personal records & notifications.
+-   
+- **Below are sample Web created for hospital analytics:**
+  - <img width="1342" height="603" alt="Screenshot 2025-09-09 150732" src="https://github.com/user-attachments/assets/e9d67ccb-3650-4437-891c-315b58de03bc" />
+  - ![2](https://github.com/user-attachments/assets/6746fe70-9931-46b4-92cc-a5715b61cfcb)
+  - <img width="1340" height="609" alt="Screenshot 2025-09-09 150919" src="https://github.com/user-attachments/assets/fa565cac-1c95-454c-9dde-2bedd05a27e0" />
+  - <img width="1340" height="609" alt="Screenshot 2025-09-09 150950" src="https://github.com/user-attachments/assets/299c7c2d-ca41-4946-a06f-6e009b355c98" />
+  - <img width="1336" height="600" alt="Screenshot 2025-09-09 151302" src="https://github.com/user-attachments/assets/ef8674ea-5c06-49b8-bd5f-5b7dfd2da726" />
+
+
+
+
 
 ---
